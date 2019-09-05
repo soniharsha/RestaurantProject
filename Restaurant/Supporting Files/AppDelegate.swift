@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         NotificationCenter.default.addObserver(self, selector: #selector(updateBadgeValue), name: MenuController.orderUpdateNotification, object: nil)
         orderTabBarItem = (self.window?.rootViewController as? UITabBarController)?.viewControllers?[1].tabBarItem
         return true
